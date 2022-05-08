@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements
 
                 if (checkBoxDone.isChecked()) {
                 } else {
-                    simpleButton2.setText("Check Box Done");
+                    simpleButton2.setText(" Done is clicked");
                 }
 
                 break;
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements
 
                 if (checkBoxPending.isChecked())
 
-                    simpleButton2.setText("Check Box Pending");
+                    simpleButton2.setText("Pending is clicked");
 
                 break;
 
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements
 
                 if (checkBoxRead.isChecked())
 
-                    simpleButton2.setText("Check Box Read");
+                    simpleButton2.setText("Read is clicked");
 
                 break;
 
