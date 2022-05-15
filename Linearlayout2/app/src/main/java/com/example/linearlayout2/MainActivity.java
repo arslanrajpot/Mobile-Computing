@@ -10,13 +10,13 @@ import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "This is Main Activity";
+    private static final String TAG = "Main Activity";
     Button bn1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac);
-        Log.d(TAG, "This is my on create");
+        Log.d(TAG, "This is  on create");
         bn1 = findViewById(R.id.button2);
         bn1.setOnClickListener(new View.OnClickListener() {
             public void onClick (View v){
@@ -31,27 +31,27 @@ public class MainActivity extends AppCompatActivity {
     }
     protected void onStart(){
         super.onStart();
-        Log.d(TAG, "This my on start");
+        Log.d(TAG, " on start");
 
     }
     protected void onResume(){
         super.onResume();
-        Log.d(TAG, "This my on resume");
+        Log.d(TAG, " on resume");
 
     }
     protected void onPause(){
         super.onPause();
-        Log.d(TAG, "This my on pause");
+        Log.d(TAG, " on pause");
 
     }
     protected void onStop(){
         super.onStop();
-        Log.d(TAG, "This my on stop");
+        Log.d(TAG, " on stop");
 
     }
     protected void onDestroy(){
         super.onDestroy();
-        Log.d(TAG, "This my on Destroy");
+        Log.d(TAG, " on Destroy");
 
     }
 }
