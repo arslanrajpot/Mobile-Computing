@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        studentList.add("Saad");
-        studentList.add("Zahid");
-        studentList.add("Saeed");
-        studentList.add("Zainab");
+        studentList.add("arslan");
+        studentList.add("bilal");
+        studentList.add("abdullah");
+        studentList.add("nomi");
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, studentList);
         listView = findViewById(R.id.listview);
         listView.setAdapter(arrayAdapter);
