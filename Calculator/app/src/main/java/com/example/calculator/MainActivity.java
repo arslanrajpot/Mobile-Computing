@@ -165,7 +165,30 @@ public class MainActivity extends AppCompatActivity {
                 input.setText(data + "%");
             }
         });
-      
+        equal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                data=input.getText().toString();
+               // Toast.makeText(MainActivity.this, ""+data, Toast.LENGTH_SHORT).show();
+
+                data=data.replaceAll("×","*");
+                data=data.replaceAll("%","/100");
+                data=data.replaceAll("÷","/");
+
+                Context rhino=Context.enter();
+                rhino.setOptimizationLevel(-1);
+
+                String finalResult="";
+
+                Scriptable scriptable=rhino.initStandardObjects();
+                finalResult=rhino.evaluateString(scriptable,data,"Javascript",1,null).toString();
+                output.setText(finalResult);
+
+
+
+
+            }
+        });
 
     }
 }
