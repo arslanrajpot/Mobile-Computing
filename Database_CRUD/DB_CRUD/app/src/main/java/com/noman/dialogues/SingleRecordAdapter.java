@@ -77,7 +77,7 @@ public class SingleRecordAdapter extends BaseAdapter {
     private void deleteDialog(int index) {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivityContext);
         builder.setTitle("Confirm");
-        builder.setMessage("Are you sure you want to delete this?");
+        builder.setMessage("Are you sure you want to delete this record?");
 
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override

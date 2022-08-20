@@ -45,15 +45,13 @@ public class MainActivity extends AppCompatActivity {
                 idInput = findViewById(R.id.idInput);
                 nameInput = findViewById(R.id.nameInput);
                 if(idInput.getText().length() == 0 | nameInput.getText().length() == 0) {
-                    Toast.makeText(MainActivity.this, "ID and Name fields can't be empty.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "ID and Name fields are empty please fill", Toast.LENGTH_SHORT).show();
                     return;
                 } else if(!databaseHelper.isIDAvailable(Integer.parseInt(idInput.getText().toString()))) {
-                    Toast.makeText(MainActivity.this, "ID already exists. Try another one.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "ID already exists.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-//                else {
-//                    Log.d("AAAAA", databaseHelper.isIDAvailable(Integer.parseInt(idInput.getText().toString())));
-//                }
+//
                 Date date = new Date();
                 StudentModel studentModel = new StudentModel("", idInput.getText().toString(), nameInput.getText().toString(), "" + date.getTime());
                 databaseHelper.addStudent(studentModel);
