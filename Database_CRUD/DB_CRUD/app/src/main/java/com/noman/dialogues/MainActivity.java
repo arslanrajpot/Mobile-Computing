@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<StudentModel> studentsList;
     ListView listView;
-    Button addBtn;
+    Button addButton;
     Button viewAllBtn;
 
     EditText idInput;
@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.recordView);
         SingleRecordAdapter singleRecordAdapter = new SingleRecordAdapter(getApplicationContext(), MainActivity.this, studentsList);
 
-        addBtn = findViewById(R.id.addBtn);
-        addBtn.setOnClickListener(new View.OnClickListener() {
+        addButton = findViewById(R.id.addBtn);
+        addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 idInput = findViewById(R.id.idInput);
