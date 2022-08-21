@@ -14,7 +14,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME="students_db";
     private static final String TABLE_NAME="students";
     private static final String id="id";
-    private static final String reg_no="reg_no";
+    private static final String registration_no="registration_no";
     private static final String name="name";
     private static final String created_at="created_at";
 
@@ -25,7 +25,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String table_query = "CREATE TABLE if not EXISTS "+TABLE_NAME+
                 "("+id+" INTEGER PRIMARY KEY,"+
-                reg_no+" TEXT,"+
+                registration_no+" TEXT,"+
                 name+" TEXT,"+
                 created_at+" TEXT"+
                 ")";
@@ -40,7 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void addStudent(StudentModel studentModel) {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(reg_no, studentModel.getReg_no());
+        contentValues.put(registration_no, studentModel.getReg_no());
         contentValues.put(name, studentModel.getName());
         contentValues.put(created_at, studentModel.getCreated_at());
         db.insert(TABLE_NAME, null, contentValues);
@@ -79,7 +79,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void updateStudent(StudentModel studentModel){
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "UPDATE " + TABLE_NAME +
-                " SET " + name + " = \"" + studentModel.getName() + "\" , " + reg_no + " = \"" + studentModel.getReg_no() +
+                " SET " + name + " = \"" + studentModel.getName() + "\" , " + registration_no + " = \"" + studentModel.getReg_no() +
                 "\" WHERE " + id + " = " + studentModel.getId() ;
         db.execSQL(query);
         db.close();
@@ -89,7 +89,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean isIDAvailable(int studentID) {
         boolean isAvailable = true;
         ArrayList<StudentModel> studentsList = new ArrayList<StudentModel>();
-        String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + reg_no + " = " + studentID;
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + registration_no + " = " + studentID;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         if(cursor.moveToFirst()) {

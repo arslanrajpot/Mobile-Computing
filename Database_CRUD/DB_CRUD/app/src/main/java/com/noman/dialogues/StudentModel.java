@@ -2,20 +2,20 @@ package com.noman.dialogues;
 
 public class StudentModel {
     String id;
-    String reg_no;
+    String registration_no;
     String name;
     String created_at;
 
     public StudentModel() {
         this.id = "";
-        this.reg_no = "";
+        this.registration_no = "";
         this.name = "";
         this.created_at = "";
     }
 
-    public StudentModel(String id, String reg_no, String name, String created_at) {
+    public StudentModel(String id, String registration_no, String name, String created_at) {
         this.id = id;
-        this.reg_no = reg_no;
+        this.registration_no = registration_no;
         this.name = name;
         this.created_at = created_at;
     }
@@ -24,8 +24,8 @@ public class StudentModel {
         return id;
     }
 
-    public String getReg_no() {
-        return reg_no;
+    public String getRegistration_no_no() {
+        return registration_no;
     }
 
     public String getName() {
@@ -40,8 +40,8 @@ public class StudentModel {
         this.id = id;
     }
 
-    public void setReg_no(String reg_no) {
-        this.reg_no = reg_no;
+    public void setReg_no(String registration_no) {
+        this.registration_no = registration_no;
     }
 
     public void setName(String name) {
