@@ -1,27 +1,27 @@
 package com.noman.dialogues;
 
 public class StudentModel {
-    String id;
+    String ID;
     String registration_no;
     String name;
     String created_at;
 
     public StudentModel() {
-        this.id = "";
+        this.ID = "";
         this.registration_no = "";
         this.name = "";
         this.created_at = "";
     }
 
-    public StudentModel(String id, String registration_no, String name, String created_at) {
-        this.id = id;
+    public StudentModel(String ID, String registration_no, String name, String created_at) {
+        this.ID = ID;
         this.registration_no = registration_no;
         this.name = name;
         this.created_at = created_at;
     }
 
     public String getId() {
-        return id;
+        return ID;
     }
 
     public String getRegistration_no_no() {
@@ -36,8 +36,8 @@ public class StudentModel {
         return created_at;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String ID) {
+        this.ID = ID;
     }
 
     public void setReg_no(String registration_no) {
