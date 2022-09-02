@@ -97,11 +97,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       /*txt=findViewById(R.id.txt);
-        DatabaseAccess databaseAccess=DatabaseAccess.getInstance(getApplicationContext());
-        databaseAccess.open();
-        String translation=databaseAccess.getTranslation(1);
-        txt.setText(translation);*/
 
         surah_names=findViewById(R.id.surah_names);
         parah_names=findViewById(R.id.parah_names);
