@@ -11,30 +11,30 @@ private static final String TAG ="MainActivity";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d(TAG,"OnStart is called");
+        Log.d(TAG,"OnStart in main");
     }
     protected void onStart(){
         super.onStart();
-        Log.d(TAG,"OnStart is called");
+        Log.d(TAG,"OnStart in main ");
     }
     protected void onDestroy(){
         super.onDestroy();
-        Log.d(TAG,"OnDestroy is called ");
+        Log.d(TAG,"OnDestroy in main ");
     }
     protected void onRestart(){
         super.onRestart();
-        Log.d(TAG,"OnRestart is called ");
+        Log.d(TAG,"OnRestart in main");
     }
     protected void onStop(){
         super.onStop();
-        Log.d(TAG,"OnStop is called");
+        Log.d(TAG,"OnStop in main");
     }
     protected void onPause(){
         super.onPause();
-        Log.d(TAG,"onPause is called");
+        Log.d(TAG,"onPause in main");
     }
     protected void onResume(){
         super.onResume();
-        Log.d(TAG,"OnStart is called");
+        Log.d(TAG,"OnStart in main");
     }
 }
