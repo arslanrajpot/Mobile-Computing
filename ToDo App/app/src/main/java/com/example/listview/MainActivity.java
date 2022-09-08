@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<String> ToDos=new ArrayList<String>();
 
-        ToDos.add("Make phone call to Ammi");
-        ToDos.add("Have to do evaluation");
-        ToDos.add("Dinner");
+        ToDos.add("phone call to ammi");
+        ToDos.add("evolution");
+        ToDos.add("Lunch");
 
         ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String >(this, android.R.layout.simple_list_item_1,ToDos);
         ls.setAdapter(arrayAdapter);
